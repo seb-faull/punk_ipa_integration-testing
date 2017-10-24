@@ -45,8 +45,8 @@ end
 
 beer = PunkIpaBeersService.new
 
-beer.beers({"yeast" => "american", "abv_gt" => 4})
-p beer.uri
+# beer.beers({"yeast" => "american", "abv_gt" => 4})
+# p beer.uri
 
 # single_beer = PunkIpaBeersService.new
 # puts single_beer.single_beer_call('1').class
