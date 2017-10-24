@@ -41,15 +41,6 @@ class PunkIpaBeersService
 
   end
 
-  # def all_beers_call(opts = {})
-  #   all_beers_call = JSON.parse(self.class.get("/beers").body)
-  #   all_beers_call[0]
-  # end
-
-  # def abv_greater(opts = {})
-  #   abv_greater = JSON.parse(self.class.get(""))
-  # end
-
 end
 
 beer = PunkIpaBeersService.new
