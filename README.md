@@ -44,5 +44,4 @@ To get results on beers based on certain criteria, you must call this outside th
 ```p criteria_results.beers({search_criteria})```
 
 #### Search criteria is a hash containing the following possible key-values:
-![Possible Punk API Search Criteria]
-(Punk_Api_Search_Params.png)
+![Possible Punk API Search Criteria](Punk_Api_Search_Params.png)
