@@ -48,7 +48,7 @@ beer = PunkIpaBeersService.new
 # p beer.uri
 
 # single_beer = PunkIpaBeersService.new
-# puts single_beer.single_beer_call('1').class
+# puts single_beer.single_beer_call('1')
 
 # random_beer = PunkIpaBeersService.new
 # puts random_beer.random_beer_call

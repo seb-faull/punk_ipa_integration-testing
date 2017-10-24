@@ -27,6 +27,4 @@ describe 'Single Beer tests' do
     expect(@json['first_brewed']).to be_kind_of(String)
   end
 
-
-
 end
