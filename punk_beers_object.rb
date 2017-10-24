@@ -31,12 +31,11 @@ class PunkIpaBeersService
           @uri << "&"
           num_keys += 1
         end
-        query_resp = JSON.parse(self.class.get("/beers#{@uri}").body)
-        query_resp[0]
+          JSON.parse(self.class.get("/beers#{@uri}").body)
+
       end
     else
-      response = JSON.parse(self.class.get('/beers').body)
-      response[0]
+      JSON.parse(self.class.get('/beers').body)
     end
 
   end
