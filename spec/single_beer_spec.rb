@@ -32,19 +32,35 @@ describe 'Single Beer tests' do
   end
 
   it 'ABV should have a float value' do
-      expect(@json['abv']).to be_kind_of(Float).or be_kind_of(Integer)
+    expect(@json['abv']).to be_kind_of(Float).or be_kind_of(Integer)
   end
 
-  it 'IBU should have a float value' do
-      expect(@json['ibu']).to be_kind_of(Float).or be_kind_of(Integer).or be_kind_of(NilClass)
+  it 'IBU should have a float, integer or Nil value' do
+    expect(@json['ibu']).to be_kind_of(Float).or be_kind_of(Integer).or be_kind_of(NilClass)
   end
 
   it 'Target FG should have a float value' do
-      expect(@json['target_fg']).to be_kind_of(Integer)
+    expect(@json['target_fg']).to be_kind_of(Integer)
   end
 
-  it 'Target OG should have a float value' do
-      expect(@json['target_og']).to be_kind_of(Float).or be_kind_of(Integer).or be_kind_of(NilClass)
+  it 'Target OG should have a float, integer or Nil value' do
+    expect(@json['target_og']).to be_kind_of(Float).or be_kind_of(Integer).or be_kind_of(NilClass)
+  end
+
+  it 'PH should have a float, integer or Nil value' do
+    expect(@json['ph']).to be_kind_of(Float).or be_kind_of(Integer).or be_kind_of(NilClass)
+  end
+
+  it 'Attenuation Level should have a float, integer or Nil value' do
+    expect(@json['attenuation_level']).to be_kind_of(Float).or be_kind_of(Integer).or be_kind_of(NilClass)
+  end
+
+  it 'Volumes Value should have a float, integer or Nil value' do
+    expect(@json['volume']['value']).to be_kind_of(Float).or be_kind_of(Integer).or be_kind_of(NilClass)
+  end
+
+  it 'Volumes Unit should have a String value' do
+    expect(@json['volume']['unit']).to be_kind_of(String)
   end
 
 end

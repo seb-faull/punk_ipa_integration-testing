@@ -49,7 +49,7 @@ describe 'All Beers tests' do
     end
   end
 
-  it 'IBU should have a float value' do
+  it 'IBU should have a float, integer or Nil value' do
     @json.each do |i|
       expect(i['ibu']).to be_kind_of(Float).or be_kind_of(Integer).or be_kind_of(NilClass)
     end
@@ -61,15 +61,33 @@ describe 'All Beers tests' do
     end
   end
 
-  it 'Target OG should have a float value' do
+  it 'Target OG should have a float, integer or Nil value' do
     @json.each do |i|
       expect(i['target_og']).to be_kind_of(Float).or be_kind_of(Integer).or be_kind_of(NilClass)
     end
   end
 
-  it 'PH should have a float value' do
+  it 'PH should have a float, integer or Nil value' do
     @json.each do |i|
       expect(i['ph']).to be_kind_of(Float).or be_kind_of(Integer).or be_kind_of(NilClass)
+    end
+  end
+
+  it 'Attenuation Level should have a float, integer or Nil value' do
+    @json.each do |i|
+      expect(i['attenuation_level']).to be_kind_of(Float).or be_kind_of(Integer).or be_kind_of(NilClass)
+    end
+  end
+
+  it 'Volumes Value should have a float, integer or Nil value' do
+    @json.each do |i|
+      expect(i['volume']['value']).to be_kind_of(Float).or be_kind_of(Integer).or be_kind_of(NilClass)
+    end
+  end
+
+  it 'Volumes Unit should have a String value' do
+    @json.each do |i|
+      expect(i['volume']['unit']).to be_kind_of(String)
     end
   end
 end
